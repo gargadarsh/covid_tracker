@@ -3,10 +3,9 @@ import json
 import pyttsx3
 import speech_recognition as sr
 import re
+import config
 
-API_KEY = "tJCdZW--kTTg"
-PROJECT_TOKEN = "t_DySoSWgWyY"
-RUN_TOKEN = "tRVY24_6Mi6n"
+
 
 class Data:
     def __init__(self, api_key, project_token):
@@ -18,8 +17,8 @@ class Data:
         self.getData()
 
     def getData(self):
-        response = requests.get(f'https://www.parsehub.com/api/v2/projects/{PROJECT_TOKEN}/last_ready_run/data',
-                                params={"api_key": API_KEY})
+        response = requests.get(f'https://www.parsehub.com/api/v2/projects/{config.PROJECT_TOKEN}/last_ready_run/data',
+                                params={"api_key": config.API_KEY})
         self.data = json.loads(response.text)
 
     def getTotalCases(self):
@@ -82,7 +81,7 @@ def main():
     print("Starting COVID-19 Tracker and Predictor Voice Assistant :]")
     print("NOTE: Say STOP to stop the program!")
 
-    data = Data(API_KEY, PROJECT_TOKEN)
+    data = Data(config.API_KEY, config.PROJECT_TOKEN)
 
     #potential phrases
     END = 'STOP'
