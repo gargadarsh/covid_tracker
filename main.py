@@ -57,6 +57,8 @@ class Data:
             countries.append(country['name'].lower())
         return countries
 
+
+
 def speak(text):
     engine = pyttsx3.init()
     engine.say(text)
@@ -75,20 +77,51 @@ def getAudio():
     return said.lower()
 
 
-data = Data(API_KEY, PROJECT_TOKEN)
-
 
 def main():
     print("Starting COVID-19 Tracker and Predictor Voice Assistant :]")
     print("NOTE: Say STOP to stop the program!")
-    END_PHRASE = 'STOP'
+
+    data = Data(API_KEY, PROJECT_TOKEN)
+
+    #potential phrases
+    END = 'STOP'
+    TOTAL_PATT = {
+        re.compile("[\w\s]+ total [\w\s]+ cases"): data.getTotalCases,
+        re.compile("[\w\s]+ total cases "): data.getTotalCases,
+        re.compile("[\w\s]+ total [\w\s]+ cases [\w\s]+"): data.getTotalCases,
+        re.compile("[\w\s]+ total cases [\w\s]+"): data.getTotalCases,
+
+        re.compile("[\w\s]+ total [\w\s]+ deaths"): data.getTotalDeaths(),
+        re.compile("[\w\s]+ total deaths"): data.getTotalDeaths(),
+        re.compile("[\w\s]+ total [\w\s]+ deaths [\w\s]+"): data.getTotalDeaths(),
+        re.compile("[\w\s]+ total deaths [\w\s]+"): data.getTotalDeaths(),
+
+        re.compile("[\w\s]+ total [\w\s]+ recoveries "): data.getTotalRecovered(),
+        re.compile("[\w\s]+ total recoveries"): data.getTotalRecovered(),
+        re.compile("[\w\s]+ total [\w\s]+ recoveries [\w\s]+"): data.getTotalRecovered(),
+        re.compile("[\w\s]+ total recoveries [\w\s]+"): data.getTotalRecovered()
+    }
+
+    COUNTRY_PATT = {
+        re.compile("[\w\s]+ cases [\w\s]+"): lambda country: data.getCountryData(country)['total_cases']
+    }
 
 
     while True:
-        print("Listening: ")
+        print("\nListening: ")
         text = getAudio()
+        result = None
 
-        if text.find(END_PHRASE):
+        for pattern, func in TOTAL_PATT.items():
+            if pattern.match(text):
+                result = func()
+                break
+
+        if result:
+            speak(result)
+
+        if text.find(END) != -1:
             break
 
-print(data.getListOfCountries())
+main()
