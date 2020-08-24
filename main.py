@@ -35,6 +35,7 @@ class Data:
         for item in data:
             if item['name'] == "Deaths:":
                 return item['value']
+        return "None"
 
     def getTotalRecovered(self):
         data = self.data['total']
@@ -50,9 +51,11 @@ class Data:
                 return item
         return "None"
 
-
-data = Data(API_KEY, PROJECT_TOKEN)
-print(data.getCountryData("USA")['total_cases'])
+    def getListOfCountries(self):
+        countries = []
+        for country in self.data['country']:
+            countries.append(country['name'].lower())
+        return countries
 
 def speak(text):
     engine = pyttsx3.init()
@@ -71,9 +74,16 @@ def getAudio():
 
     return said.lower()
 
+
+data = Data(API_KEY, PROJECT_TOKEN)
+
+
 def main():
     print("Starting COVID-19 Tracker and Predictor Voice Assistant :]")
     print("NOTE: Say STOP to stop the program!")
+    END_PHRASE = 'STOP'
+
+
     while True:
         print("Listening: ")
         text = getAudio()
@@ -81,4 +91,4 @@ def main():
         if text.find(END_PHRASE):
             break
 
-
+print(data.getListOfCountries())
