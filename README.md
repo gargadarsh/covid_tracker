@@ -13,7 +13,11 @@
     can be useful to individual users of this application
     
     Adding Neural Networks to predict certain outputs given features of 
-    coronavirus through data analysis and output 
+    coronavirus, symptoms, patient experiences through data analysis and
+    outputs potential infection, death, and recovery data.
+    
+##Implementation
+    Coming soon!
     
 
 
