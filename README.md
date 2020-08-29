@@ -47,7 +47,21 @@
 ## Implementation
     Coming soon!
     
-## References
+## Acknowledgments
     Our World in Data: University of Oxford, Oxford Martin School
+    
+    Citation
+    Davide Chicco, Giuseppe Jurman: Machine learning can predict survival of patients with heart failure from serum 
+    creatinine and ejection fraction alone. BMC Medical Informatics and Decision Making 20, 16 (2020). 
+<a href=https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-020-1023-5>(link)</a>
+
+    License
+    CC BY 4.0
+
+    Splash icon
+    Icon by Freepik, available on Flaticon.
+
+    Splash banner
+    Wallpaper by jcomp, available on Freepik.
 
 
