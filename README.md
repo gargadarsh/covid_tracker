@@ -63,5 +63,19 @@
 
     Splash banner
     Wallpaper by jcomp, available on Freepik.
+    
+## More Acknowledgements
+    Data: 
+    Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.
+    University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.
+    University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.
+    V.A. Medical Center, Long Beach and Cleveland Clinic Foundation: Robert Detrano, M.D., Ph.D.
+    Donor:
+    David W. Aha (aha '@' ics.uci.edu) (714) 856-8779
+
+    Inspiration
+    Experiments with the Cleveland database have concentrated on simply attempting to distinguish presence (values 1,2,3,4) from absence (value 0).
+
+    See if you can find any other trends in heart data to predict certain cardiovascular events or find any clear indications of heart health.
 
 
