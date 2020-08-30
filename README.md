@@ -48,12 +48,11 @@
     Coming soon!
     
 ## Acknowledgments
-    Our World in Data: University of Oxford, Oxford Martin School
+#### Heart Failure Dataset from Our World in Data: University of Oxford, Oxford Martin School
     
     Citation
     Davide Chicco, Giuseppe Jurman: Machine learning can predict survival of patients with heart failure from serum 
     creatinine and ejection fraction alone. BMC Medical Informatics and Decision Making 20, 16 (2020). 
-<a href=https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-020-1023-5>(link)</a>
 
     License
     CC BY 4.0
@@ -63,8 +62,10 @@
 
     Splash banner
     Wallpaper by jcomp, available on Freepik.
+<a href=https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-020-1023-5>Click Here for Source!</a>
     
 ## More Acknowledgements
+### For Heart Disease Dataset
     Data: 
     Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.
     University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.
@@ -77,5 +78,9 @@
     Experiments with the Cleveland database have concentrated on simply attempting to distinguish presence (values 1,2,3,4) from absence (value 0).
 
     See if you can find any other trends in heart data to predict certain cardiovascular events or find any clear indications of heart health.
+    
+## Even More Acknowledgements
+#### For Diabetes Data Set:
+    Smith, J.W., Everhart, J.E., Dickson, W.C., Knowler, W.C., & Johannes, R.S. (1988). Using the ADAP learning algorithm to forecast the onset of diabetes           mellitus. In Proceedings of the Symposium on Computer Applications and Medical Care (pp. 261--265). IEEE Computer Society Press.
 
 
