@@ -62,7 +62,7 @@
 
     Splash banner
     Wallpaper by jcomp, available on Freepik.
-<a href=https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-020-1023-5>(link)</a>
+<a href=https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-020-1023-5>Click Here for Source!</a>
     
 ## More Acknowledgements
 ### For Heart Disease Dataset
