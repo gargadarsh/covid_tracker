@@ -28,7 +28,7 @@
     go to your terminal and type each line of code 
     
     NOTE: If you have trouble install pyaudio, run the command below first (for Macs only!)
-    brew portaudio
+    brew install portaudio
         
 ### <li>Windows
     
@@ -41,7 +41,7 @@
     
     pip install requests
     pip install SpeechRecognition
-    pip pyaudio
+    pip install pyaudio
     
     
 ## Implementation
